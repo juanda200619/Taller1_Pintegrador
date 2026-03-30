@@ -1,8 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    </head>
-    <body></body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avances - UniTicket</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Encabezado de la pagina -->
+    <header>
+        <nav aria-label="Navegación principal">
+            <div class="nav-wrapper blue">
+                <a href="index.html" class="brand-logo center">UniTicket</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <h1 class="center-align" style="font-size: 1.8rem;">Avances del Proyecto</h1>
+
+        <!-- Lista de avances del proyecto -->
+        <section aria-label="Avances del proyecto">
+            <div class="row">
+
+                <!-- Avance 1 -->
+                <article class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Repositorio GitHub</h2>
+                            <p>Se creó el repositorio del proyecto y se implementó la metodología Gitflow.</p>
+
+                            <div class="extra-content" style="display:none;" aria-hidden="true">
+                                <p>Se configuraron ramas main, develop y feature para organizar el desarrollo.</p>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" onclick="toggleContent(this)" aria-expanded="false">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Avance 2 -->
+                <article class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Integración con Jenkins</h2>
+                            <p>Se inició la configuración del pipeline CI/CD.</p>
+
+                            <div class="extra-content" style="display:none;" aria-hidden="true">
+                                <p>Se automatizan procesos como pruebas y despliegue continuo.</p>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" onclick="toggleContent(this)" aria-expanded="false">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Avance 3 -->
+                <article class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="card-title">Implementación con Docker</h2>
+                            <p>Se inició la contenerización del sistema UniTicket usando Docker.</p>
+
+                            <div class="extra-content" style="display:none;" aria-hidden="true">
+                                <p>Se configuraron contenedores para la aplicación y la base de datos, gestionados mediante docker-compose para facilitar el despliegue.</p>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" onclick="toggleContent(this)" aria-expanded="false">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Controles adicionales -->
+        <aside class="center-align" aria-label="Opciones de personalización">
+            <button class="btn blue" onclick="cambiarColor()">Cambiar color de fondo</button>
+        </aside>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="page-footer blue">
+        <div class="container center-align">
+            <small>© 2026 UniTicket - Proyecto Integrador</small>
+        </div>
+    </footer>
+
+</body>
 </html>

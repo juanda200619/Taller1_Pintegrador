@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - UniTicket</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Encabezado de la pagina -->
+    <header>
+        <nav aria-label="Navegación principal">
+            <div class="nav-wrapper blue">
+                <a href="index.html" class="brand-logo center">UniTicket</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <h1 class="center-align" style="font-size: 1.8rem;">Contáctanos</h1>
+
+        <!-- Sección del formulario de contacto -->
+        <section aria-label="Formulario de contacto">
+            <div class="row">
+                <form class="col s12" id="formContacto" novalidate>
+
+                    <!-- Nombre -->
+                    <div class="input-field col s12">
+                        <input id="nombre" type="text" name="nombre" autocomplete="name" required>
+                        <label for="nombre">Nombre</label>
+                        <span class="helper-text red-text" id="errorNombre" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Correo -->
+                    <div class="input-field col s12">
+                        <input id="correo" type="email" name="correo" autocomplete="email" required>
+                        <label for="correo">Correo electrónico</label>
+                        <span class="helper-text red-text" id="errorCorreo" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="input-field col s12">
+                        <textarea id="mensaje" name="mensaje" class="materialize-textarea" required></textarea>
+                        <label for="mensaje">Mensaje</label>
+                        <span class="helper-text red-text" id="errorMensaje" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <div class="center-align">
+                        <button class="btn blue waves-effect waves-light" type="submit">
+                            Enviar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="page-footer blue">
+        <div class="container center-align">
+            <small>© 2026 UniTicket - Proyecto Integrador</small>
+        </div>
+    </footer>
+
+</body>
+</html>
