@@ -1,8 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    </head>
-    <body></body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivos - UniTicket</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav .brand-logo {
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1565c0 0%, #1e88e5 60%, #42a5f5 100%);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        /* Títulos */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1565c0;
+        }
+
+        .divider-blue {
+            width: 60px;
+            height: 4px;
+            background: #1e88e5;
+            margin: 10px auto 30px;
+            border-radius: 2px;
+        }
+
+        /* Card */
+        .objective-card {
+            border-radius: 10px;
+            border-top: 5px solid #1e88e5;
+        }
+
+        /* Collapsible */
+        .collapsible-header {
+            font-weight: 600;
+            color: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header>
+    <nav>
+        <div class="nav-wrapper blue darken-3">
+            <a href="index.html" class="brand-logo center">🎫 UniTicket</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href="nosotros.html"><i class="material-icons left">group</i>Nosotros</a></li>
+                <li class="active"><a href="objetivos.html"><i class="material-icons left">flag</i>Objetivos</a></li>
+                <li><a href="avances.html"><i class="material-icons left">timeline</i>Avances</a></li>
+                <li><a href="contacto.html"><i class="material-icons left">mail</i>Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="page-hero">
+    <i class="material-icons" style="font-size: 3rem;">flag</i>
+    <h1>Objetivos del Proyecto</h1>
+    <p>Metas que guían el desarrollo de UniTicket</p>
+</section>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main class="container" style="padding-top: 40px;">
+
+    <!-- OBJETIVO GENERAL -->
+    <section style="margin-bottom: 50px;">
+        <h2 class="section-title center-align">Objetivo General</h2>
+        <div class="divider-blue"></div>
+
+        <div class="card objective-card">
+            <div class="card-content center-align">
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">
+                    Diseñar y desarrollar un sistema web llamado UniTicket que permita la gestión
+                    eficiente de incidencias técnicas en los laboratorios universitarios,
+                    integrando prácticas DevOps, automatización de procesos y despliegue continuo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVOS ESPECÍFICOS -->
+    <section>
+        <h2 class="section-title center-align">Objetivos Específicos</h2>
+        <div class="divider-blue"></div>
+
+        <ul class="collapsible popout">
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">build</i>
+                    Implementar prácticas DevOps
+                </div>
+                <div class="collapsible-body">
+                    <span>Aplicar las diferentes prácticas de DevOps 
+                        (Integración, Entrega y Despliegue Continuo), 
+                        reconociendo sus beneficios y retos para agilizar 
+                        el ciclo de desarrollo del software UniTicket.</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">storage</i>
+                    Gestionar base de datos
+                </div>
+                <div class="collapsible-body">
+                    <span>Configurar una base de datos relacional para almacenar los tickets y su información.</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">cloud</i>
+                    Desplegar en la nube
+                </div>
+                <div class="collapsible-body">
+                    <span>Publicar la aplicación en un servidor VPS usando contenedores Docker.</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">verified</i>
+                    Garantizar calidad del software
+                </div>
+                <div class="collapsible-body">
+                    <span>Aplicar pruebas automatizadas y análisis de código para asegurar calidad y estabilidad.</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">group_work</i>
+                    Fomentar trabajo colaborativo
+                </div>
+                <div class="collapsible-body">
+                    <span>Utilizar metodologías de control de versiones como Gitflow para el desarrollo en equipo.</span>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="page-footer blue darken-3">
+    <div class="container center-align">
+        <p class="white-text">© 2026 UniTicket — Proyecto Integrador</p>
+    </div>
+</footer>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var sidenav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenav);
+
+    var collapsible = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsible);
+});
+</script>
+
+</body>
 </html>
