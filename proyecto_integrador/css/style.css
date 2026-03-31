@@ -11,3 +11,11 @@ body {
 .container {
     flex: 1;
 }
+
+.member-card .card-image img {
+    height: 220px;           /* más pequeña */
+    width: 100%;
+    object-fit: cover;       /* recorta proporcionalmente */
+    object-position: center; /* centra la imagen */
+}
+

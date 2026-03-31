@@ -1,8 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    </head>
-    <body></body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniTicket - Inicio</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar */
+        nav .brand-logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav ul a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        /* Banner / Hero */
+        .hero-section {
+            background: linear-gradient(135deg, #1565c0 0%, #1e88e5 60%, #42a5f5 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -50px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .hero-icon {
+            font-size: 5rem !important;
+            margin-bottom: 16px;
+            display: block;
+            opacity: 0.95;
+        }
+
+        /* Descripción del proyecto */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #1565c0;
+            margin-bottom: 8px;
+        }
+
+        .divider-blue {
+            width: 60px;
+            height: 4px;
+            background: #1e88e5;
+            margin: 0 auto 24px;
+            border-radius: 2px;
+        }
+
+        /* Cards de características */
+        .feature-card {
+            border-radius: 10px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(21, 101, 192, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem !important;
+            color: #1e88e5;
+            margin-bottom: 10px;
+        }
+
+        .feature-card .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1565c0;
+        }
+
+        /* Sección de bienvenida toast */
+        .welcome-strip {
+            background: #e3f2fd;
+            border-left: 5px solid #1e88e5;
+            padding: 16px 24px;
+            border-radius: 4px;
+            margin: 30px 0;
+        }
+
+        /* Footer */
+        footer.page-footer {
+            margin-top: auto;
+        }
+
+        footer.page-footer .footer-copyright {
+            background: rgba(0,0,0,0.15);
+        }
+
+        /* Botones hero */
+        .btn-hero {
+            margin: 6px;
+            font-weight: 600;
+            border-radius: 25px;
+            padding: 0 28px;
+        }
+
+        /* Responsive hero */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header>
+        <nav aria-label="Navegación principal">
+            <div class="nav-wrapper blue darken-3">
+                <a href="index.html" class="brand-logo center">🎫 UniTicket</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+                    <li><a href="nosotros.html"><i class="material-icons left">group</i>Nosotros</a></li>
+                    <li><a href="objetivos.html"><i class="material-icons left">flag</i>Objetivos</a></li>
+                    <li><a href="avances.html"><i class="material-icons left">timeline</i>Avances</a></li>
+                    <li><a href="contacto.html"><i class="material-icons left">mail</i>Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Menú móvil (sidenav) -->
+        <ul class="sidenav" id="mobile-nav">
+            <li><div class="user-view blue darken-3" style="padding:16px;">
+                <p class="white-text" style="font-weight:700; font-size:1.2rem;">🎫 UniTicket</p>
+            </div></li>
+            <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+            <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+            <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+            <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+        </ul>
+    </header>
+
+    <!-- ===================== BANNER / HERO ===================== -->
+    <section class="hero-section" aria-label="Presentación del proyecto">
+        <i class="material-icons hero-icon">confirmation_number</i>
+        <h1 class="hero-title">UniTicket</h1>
+        <p class="hero-subtitle">
+            Sistema integrado de gestión de tickets para soporte técnico universitario.
+            Eficiencia, trazabilidad y comunicación en un solo lugar.
+        </p>
+        <div>
+            <a href="nosotros.html" class="btn white blue-text btn-hero waves-effect waves-blue">
+                <i class="material-icons left">group</i>Conoce el equipo
+            </a>
+            <a href="avances.html" class="btn btn-outlined btn-hero waves-effect waves-light" 
+               style="border: 2px solid white; background: transparent; color: white;">
+                <i class="material-icons left">timeline</i>Ver avances
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+    <main class="container" style="padding-top: 40px;">
+
+        <!-- Descripción del proyecto -->
+        <section aria-label="Descripción del proyecto" style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title">¿Qué es UniTicket?</h2>
+            <div class="divider-blue"></div>
+            <p style="max-width: 700px; margin: 0 auto; color: #555; font-size: 1.05rem; line-height: 1.8;">
+                UniTicket consiste en el desarrollo de una aplicación web para gestionar fallas técnicas en los 
+                laboratorios de una universidad.
+                Los usuarios pueden reportar problemas y los técnicos pueden administrarlos hasta su solución.
+                Pero no es solo construir una app: 
+                el enfoque central es crear todo un ecosistema automatizado de desarrollo y despliegue,
+                como se hace en la industria real.
+            </p>
+        </section>
+
+        <!-- Mensaje de bienvenida -->
+        <div class="welcome-strip" role="note" aria-label="Mensaje de bienvenida">
+            <span style="font-weight: 600; color: #1565c0;">
+                <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">info</i>
+                ¡Bienvenido! Navega por las secciones del menú para conocer todos los detalles del proyecto.
+            </span>
+        </div>
+
+        <!-- Cards de características -->
+        <section aria-label="Características del proyecto">
+            <div class="row">
+
+                <!-- Card 1 -->
+                <article class="col s12 m6 l4">
+                    <div class="card feature-card z-depth-1">
+                        <div class="card-content center-align">
+                            <i class="material-icons feature-icon">people</i>
+                            <h3 class="card-title">Equipo de trabajo</h3>
+                            <p style="color: #666;">
+                                Contamos con un equipo multidisciplinar comprometido con el desarrollo ágil y la calidad del software.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="nosotros.html" class="blue-text">Ver equipo →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="col s12 m6 l4">
+                    <div class="card feature-card z-depth-1">
+                        <div class="card-content center-align">
+                            <i class="material-icons feature-icon">flag</i>
+                            <h3 class="card-title">Objetivos claros</h3>
+                            <p style="color: #666;">
+                                Definimos metas concretas que guían el desarrollo del sistema desde su concepción hasta el despliegue.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="objetivos.html" class="blue-text">Ver objetivos →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col s12 m6 l4">
+                    <div class="card feature-card z-depth-1">
+                        <div class="card-content center-align">
+                            <i class="material-icons feature-icon">build</i>
+                            <h3 class="card-title">Avances continuos</h3>
+                            <p style="color: #666;">
+                                Implementamos CI/CD con Jenkins, contenedores Docker y control de versiones con Gitflow.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="avances.html" class="blue-text">Ver avances →</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Llamado a la acción de contacto -->
+        <section class="center-align" style="padding: 30px 0 50px;" aria-label="Contacto">
+            <h2 class="section-title">¿Tienes preguntas?</h2>
+            <div class="divider-blue"></div>
+            <p style="color: #555; margin-bottom: 20px;">Escríbenos y con gusto atenderemos tus inquietudes sobre el proyecto.</p>
+            <a href="contacto.html" class="btn blue darken-2 waves-effect waves-light btn-hero">
+                <i class="material-icons left">send</i>Contáctanos
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="page-footer blue darken-3" role="contentinfo">
+        <div class="container">
+            <div class="row" style="margin-bottom: 0;">
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">🎫 UniTicket</h5>
+                    <p class="grey-text text-lighten-3" style="font-size: 0.9rem;">
+                        Sistema de gestión de tickets universitarios. Proyecto Integrador I — Ingeniería de Sistemas.
+                    </p>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">Navegación</h5>
+                    <ul>
+                        <li><a href="nosotros.html" class="grey-text text-lighten-3">Nosotros</a></li>
+                        <li><a href="objetivos.html" class="grey-text text-lighten-3">Objetivos</a></li>
+                        <li><a href="avances.html" class="grey-text text-lighten-3">Avances</a></li>
+                        <li><a href="contacto.html" class="grey-text text-lighten-3">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">Información</h5>
+                    <p class="grey-text text-lighten-3" style="font-size: 0.9rem;">
+                        <strong>Docente:</strong> Mg(c). Juan Pablo Pinillos Reina<br>
+                        <strong>Curso:</strong> Proyecto Integrador I<br>
+                        <strong>Programa:</strong> Ingeniería de Sistemas
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                <small>© 2026 UniTicket — Proyecto Integrador | Universidad del Valle Sede Tuluá</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JS propio -->
+    <script src="js/main.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Inicializar sidenav
+            var sidenavElems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavElems);
+
+            // Toast de bienvenida
+            setTimeout(function () {
+                M.toast({ html: '👋 ¡Bienvenido a UniTicket!', classes: 'blue darken-2', displayLength: 3000 });
+            }, 800);
+        });
+    </script>
+
+</body>
 </html>

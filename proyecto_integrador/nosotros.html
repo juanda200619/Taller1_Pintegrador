@@ -3,81 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - UniTicket</title>
+    <title>Nosotros - UniTicket</title>
 
     <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <!-- Estilos propios -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-    <!-- JS -->
-    <script src="js/main.js" defer></script>
+        /* ---- Navbar ---- */
+        nav .brand-logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* ---- Hero de sección ---- */
+        .page-hero {
+            background: linear-gradient(135deg, #1565c0 0%, #1e88e5 60%, #42a5f5 100%);
+            color: white;
+            padding: 50px 0 40px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .page-hero p {
+            opacity: 0.9;
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        /* ---- Títulos de sección ---- */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1565c0;
+            margin-bottom: 6px;
+        }
+
+        .divider-blue {
+            width: 60px;
+            height: 4px;
+            background: #1e88e5;
+            margin: 0 auto 28px;
+            border-radius: 2px;
+        }
+
+        /* ---- Cards Misión / Visión ---- */
+        .mv-card {
+            border-radius: 10px;
+            border-top: 5px solid #1e88e5;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .mv-card:hover {
+            box-shadow: 0 8px 24px rgba(21, 101, 192, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .mv-icon {
+            font-size: 2.6rem !important;
+            color: #1e88e5;
+            margin-bottom: 8px;
+        }
+
+        .mv-card .card-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #1565c0;
+        }
+
+        /* ---- Cards de integrantes ---- */
+        .member-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .member-card:hover {
+            box-shadow: 0 10px 28px rgba(21, 101, 192, 0.18);
+            transform: translateY(-5px);
+        }
+
+        .member-card .card-image img {
+            height: 260px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .member-card .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: rgba(21, 101, 192, 0.82);
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .member-card .card-content p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .role-chip {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 0.82rem;
+            border-radius: 20px;
+            padding: 3px 14px;
+            margin-bottom: 10px;
+        }
+
+        /* ---- Footer ---- */
+        footer.page-footer .footer-copyright {
+            background: rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Encabezado de la pagina -->
+    <!-- ===================== NAVBAR ===================== -->
     <header>
         <nav aria-label="Navegación principal">
-            <div class="nav-wrapper blue">
-                <a href="index.html" class="brand-logo center">UniTicket</a>
+            <div class="nav-wrapper blue darken-3">
+                <a href="index.html" class="brand-logo center">🎫 UniTicket</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+                    <li class="active"><a href="nosotros.html"><i class="material-icons left">group</i>Nosotros</a></li>
+                    <li><a href="objetivos.html"><i class="material-icons left">flag</i>Objetivos</a></li>
+                    <li><a href="avances.html"><i class="material-icons left">timeline</i>Avances</a></li>
+                    <li><a href="contacto.html"><i class="material-icons left">mail</i>Contacto</a></li>
+                </ul>
             </div>
         </nav>
+
+        <!-- Menú móvil -->
+        <ul class="sidenav" id="mobile-nav">
+            <li>
+                <div class="blue darken-3" style="padding: 16px;">
+                    <p class="white-text" style="font-weight:700; font-size:1.2rem; margin:0;">🎫 UniTicket</p>
+                </div>
+            </li>
+            <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="material-icons">group</i>Nosotros</a></li>
+            <li><a href="objetivos.html"><i class="material-icons">flag</i>Objetivos</a></li>
+            <li><a href="avances.html"><i class="material-icons">timeline</i>Avances</a></li>
+            <li><a href="contacto.html"><i class="material-icons">mail</i>Contacto</a></li>
+        </ul>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="container">
-        <h1 class="center-align" style="font-size: 1.8rem;">Contáctanos</h1>
+    <!-- ===================== HERO DE SECCIÓN ===================== -->
+    <section class="page-hero" aria-label="Encabezado de la sección Nosotros">
+        <i class="material-icons" style="font-size: 3rem; opacity: 0.9;">group</i>
+        <h1>Nosotros</h1>
+        <p>Conoce la misión, visión y el equipo detrás de UniTicket</p>
+    </section>
 
-        <!-- Sección del formulario de contacto -->
-        <section aria-label="Formulario de contacto">
+    <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+    <main class="container" style="padding-top: 50px;">
+
+        <!-- ---- MISIÓN Y VISIÓN ---- -->
+        <section aria-label="Misión y Visión" style="margin-bottom: 50px;">
+            <h2 class="section-title center-align">Misión & Visión</h2>
+            <div class="divider-blue"></div>
+
             <div class="row">
-                <form class="col s12" id="formContacto" novalidate>
 
-                    <!-- Nombre -->
-                    <div class="input-field col s12">
-                        <input id="nombre" type="text" name="nombre" autocomplete="name" required>
-                        <label for="nombre">Nombre</label>
-                        <span class="helper-text red-text" id="errorNombre" role="alert" aria-live="polite"></span>
+                <!-- Misión -->
+                <article class="col s12 m6">
+                    <div class="card mv-card z-depth-1">
+                        <div class="card-content center-align">
+                            <i class="material-icons mv-icon">track_changes</i>
+                            <h3 class="card-title">Misión</h3>
+                            <p style="color: #555; line-height: 1.8; font-size: 0.97rem;">
+                                Desarrollar un sistema de gestión de tickets universitario que simplifique
+                                y digitalice el proceso de soporte técnico, brindando a estudiantes y docentes
+                                una herramienta eficiente, accesible y trazable para la resolución de incidencias
+                                tecnológicas dentro del entorno académico.
+                            </p>
+                        </div>
                     </div>
+                </article>
 
-                    <!-- Correo -->
-                    <div class="input-field col s12">
-                        <input id="correo" type="email" name="correo" autocomplete="email" required>
-                        <label for="correo">Correo electrónico</label>
-                        <span class="helper-text red-text" id="errorCorreo" role="alert" aria-live="polite"></span>
+                <!-- Visión -->
+                <article class="col s12 m6">
+                    <div class="card mv-card z-depth-1">
+                        <div class="card-content center-align">
+                            <i class="material-icons mv-icon">visibility</i>
+                            <h3 class="card-title">Visión</h3>
+                            <p style="color: #555; line-height: 1.8; font-size: 0.97rem;">
+                                Convertirnos en una solución de referencia para la gestión de soporte técnico
+                                en instituciones de educación superior, integrando buenas prácticas de DevOps,
+                                automatización y escalabilidad, con el objetivo de mejorar la calidad del
+                                servicio tecnológico en el ámbito universitario.
+                            </p>
+                        </div>
                     </div>
+                </article>
 
-                    <!-- Mensaje -->
-                    <div class="input-field col s12">
-                        <textarea id="mensaje" name="mensaje" class="materialize-textarea" required></textarea>
-                        <label for="mensaje">Mensaje</label>
-                        <span class="helper-text red-text" id="errorMensaje" role="alert" aria-live="polite"></span>
+            </div>
+        </section>
+
+        <!-- ---- INTEGRANTES ---- -->
+        <section aria-label="Integrantes del equipo" style="margin-bottom: 60px;">
+            <h2 class="section-title center-align">Equipo de trabajo</h2>
+            <div class="divider-blue"></div>
+
+            <div class="row" style="display: flex; justify-content: center; flex-wrap: wrap;">
+
+                <!-- Integrante 1 - Juan -->
+                <article class="col s12 m6 l5">
+                    <div class="card member-card z-depth-2">
+                        <div class="card-image">
+                            <img src="img/Juan.jpeg" alt="Foto de Juan, Líder de Proyecto">
+                            <span class="card-title">Juan</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="role-chip">
+                                <i class="material-icons" style="font-size: 0.9rem; vertical-align: middle;">star</i>
+                                Líder de Proyecto
+                            </span>
+                            <p>
+                                Responsable de la coordinación general del equipo, la arquitectura del sistema
+                                y la integración de las herramientas de CI/CD con Jenkins. Gestiona el flujo
+                                de trabajo mediante Gitflow y supervisa el correcto despliegue del proyecto.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="contacto.html" class="blue-text">
+                                <i class="material-icons left" style="font-size: 1rem;">mail</i>Contactar
+                            </a>
+                        </div>
                     </div>
+                </article>
 
-                    <!-- Botón de envío -->
-                    <div class="center-align">
-                        <button class="btn blue waves-effect waves-light" type="submit">
-                            Enviar
-                        </button>
+                <!-- Integrante 2 - Damian -->
+                <article class="col s12 m6 l5">
+                    <div class="card member-card z-depth-2">
+                        <div class="card-image">
+                            <img src="img/Damian.jpeg" alt="Foto de Damián, Desarrollador Backend">
+                            <span class="card-title">Damián</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="role-chip">
+                                <i class="material-icons" style="font-size: 0.9rem; vertical-align: middle;">code</i>
+                                Desarrollador
+                            </span>
+                            <p>
+                                Encargado del desarrollo de la lógica del servidor, la configuración de
+                                contenedores Docker y la gestión de la base de datos. Implementa las
+                                funcionalidades principales del sistema UniTicket y asegura su estabilidad.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="contacto.html" class="blue-text">
+                                <i class="material-icons left" style="font-size: 1rem;">mail</i>Contactar
+                            </a>
+                        </div>
                     </div>
+                </article>
 
-                </form>
             </div>
         </section>
 
     </main>
 
-    <!-- Pie de página -->
-    <footer class="page-footer blue">
-        <div class="container center-align">
-            <small>© 2026 UniTicket - Proyecto Integrador</small>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="page-footer blue darken-3" role="contentinfo">
+        <div class="container">
+            <div class="row" style="margin-bottom: 0;">
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">🎫 UniTicket</h5>
+                    <p class="grey-text text-lighten-3" style="font-size: 0.9rem;">
+                        Sistema de gestión de tickets universitarios. Proyecto Integrador I — Ingeniería de Sistemas.
+                    </p>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">Navegación</h5>
+                    <ul>
+                        <li><a href="index.html" class="grey-text text-lighten-3">Inicio</a></li>
+                        <li><a href="objetivos.html" class="grey-text text-lighten-3">Objetivos</a></li>
+                        <li><a href="avances.html" class="grey-text text-lighten-3">Avances</a></li>
+                        <li><a href="contacto.html" class="grey-text text-lighten-3">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="white-text" style="font-weight: 700;">Información</h5>
+                    <p class="grey-text text-lighten-3" style="font-size: 0.9rem;">
+                        <strong>Docente:</strong> Mg(c). Juan Pablo Pinillos Reina<br>
+                        <strong>Curso:</strong> Proyecto Integrador I<br>
+                        <strong>Programa:</strong> Ingeniería de Sistemas
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                <small>© 2026 UniTicket — Proyecto Integrador | Universidad del Valle Sede Tuluá</small>
+            </div>
         </div>
     </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var sidenavElems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavElems);
+        });
+    </script>
 
 </body>
 </html>
